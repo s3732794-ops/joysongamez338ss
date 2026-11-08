@@ -94,7 +94,7 @@ io.on('connection', (socket) => {
     socket.userEmail = cleanEmail;
     socket.username = userData.username;
 
-    const isCreator = (cleanEmail === 'memelover338@gmail.com');
+    const isCreator = (cleanEmail === 's3732794@gmail.com');
 
     socket.emit('auth_success', {
       username: socket.username,
@@ -115,7 +115,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('get_creator_users', () => {
-    if (socket.userEmail !== 'memelover338@gmail.com') return;
+    if (socket.userEmail !== 's3732794@gmail.com') return;
     const usersList = Object.values(db.users).map(u => ({
       email: u.email,
       username: u.username,
